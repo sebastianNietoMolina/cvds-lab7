@@ -13,7 +13,7 @@
     	<result property='tarifaxDia' column='tarifaxDia'/>
     	<result property='formatoRenta' column='formatoRenta'/>    
     	<result property='genero' column='genero'/>      
-    	<association property="tipo" javaType="TipoItem"></association>
+    	<association property="tipo" javaType="TipoItem" resultMap='ItemRentadoResult'columnPrefix='tiopoI_'></association>
 	</resultMap>
  
 </mapper>
