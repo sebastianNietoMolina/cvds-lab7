@@ -12,18 +12,18 @@
 		c.direccion,
 		c.email,
 		c.vetado,		
-		ir.id ,
-		ir.fechainiciorenta ,
-		ir.fechafinrenta ,
-		i.id ,
-		i.nombre ,
-		i.descripcion ,
-		i.fechalanzamiento ,
-		i.tarifaxdia ,
-		i.formatorenta ,
-		i.genero ,        
-		ti.id ,
-		ti.descripcion 
+		ir.id as itemRentado_id,
+		ir.fechainiciorenta as itemRentado_fechainiciorenta,
+		ir.fechafinrenta as itemRentado_fechafinrenta,
+		i.id as itemRentado_item_id,
+		i.nombre as itemRentado_item_nombre,
+		i.descripcion as itemRentado_item_descripcion,
+		i.fechalanzamiento as itemRentado_item_fechaLanzamiento,
+		i.tarifaxdia as itemRentado_item_tarifaxDia,
+		i.formatorenta as itemRentado_item_formatoRenta,
+		i.genero as itemRentado_item_genero,
+		ti.id as itemRentado_item_tipoItem_id,
+		ti.descripcion as itemRentado_item_tipoItem_descripcion
 		FROM VI_CLIENTES as c 
 		left join VI_ITEMRENTADO as ir on c.documento=ir.CLIENTES_documento 
 		left join VI_ITEMS as i on ir.ITEMS_id=i.id 
@@ -37,7 +37,7 @@
     	<result property='direccion' column='direccion'/>  
     	<result property='email' column='email'/>
     	<result property='vetado' column='vetado'/>      
-    	<collection property='rentados' ofType='ItemRentado' resultMap='ItemRentadoResult'></collection>
+    	<collection property='rentados' ofType='ItemRentado' resultMap='edu.eci.cvds.sampleprj.dao.mybatis.mappers.ItemRentadoMapper.ItemRentadoResult' columnPrefix="itemRentado_"></collection>
 	</resultMap>
 
           	
