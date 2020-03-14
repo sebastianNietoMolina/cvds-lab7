@@ -1,4 +1,7 @@
 ### Escuela Colombiana de Ingeniería
+### Integrantes
+	Sebastian Nieto
+	Brayan Burgos
 ### Ciclos de Vida del desarrollo de Software – CVDS
 #### Tecnologías de persistencia - Frameworks de Persistencia - Introducción a MyBatis
 
